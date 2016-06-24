@@ -67,12 +67,12 @@ URL: https://github.com/metachris/RPIO
 import os
 import sys
 # Automatically invoke sudo if non-root
-if os.geteuid() != 0:
-    print("Script not started as root. Running sudo...")
-    args = ['sudo', sys.executable] + sys.argv + [os.environ]
-    # the next line replaces the currently-running process with the sudo
-    os.execlpe('sudo', *args)
-    exit(-1)
+# if os.geteuid() != 0:
+#     print("Script not started as root. Running sudo...")
+#     args = ['sudo', sys.executable] + sys.argv + [os.environ]
+#     the next line replaces the currently-running process with the sudo
+#     os.execlpe('sudo', *args)
+#     exit(-1)
 
 import logging
 from logging import debug, info, warn, error

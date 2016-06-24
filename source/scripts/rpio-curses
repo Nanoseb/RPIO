@@ -17,12 +17,12 @@ if "dev" in CMD_OPTIONS:
     CMD_OPTIONS += ("no_rpio", "no_thread")
 
 # Automatically invoke sudo if non-root (if not on dev-machine)
-if os.geteuid() != 0 and "no_rpio" not in CMD_OPTIONS:
-    print("Script not started as root. Running sudo...")
-    args = ['sudo', sys.executable] + sys.argv + [os.environ]
-    # the next line replaces the currently-running process with the sudo
-    os.execlpe('sudo', *args)
-    exit(-1)
+# if os.geteuid() != 0 and "no_rpio" not in CMD_OPTIONS:
+#     print("Script not started as root. Running sudo...")
+#     args = ['sudo', sys.executable] + sys.argv + [os.environ]
+#     the next line replaces the currently-running process with the sudo
+#     os.execlpe('sudo', *args)
+#     exit(-1)
 
 import curses
 import curses.textpad as textpad
